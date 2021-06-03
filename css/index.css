@@ -207,3 +207,104 @@ h1 {
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
     background-color: rgba(255, 215, 0, 0.6);
 }
+
+.error-input {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+    transition: ease-in 0.2s;
+    font-size: x-large;
+    opacity: 0;
+}
+
+.error-input button {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: ease-in 0.2s;
+}
+
+.error-input button:hover {
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.error-input input,
+.error-input button {
+    padding: 0.5rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.show-map-section {
+    opacity: 1;
+}
+
+.favorites-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: ease-in-out 0.2s;
+}
+
+.fav-locations {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.fav-location {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid;
+    border-radius: 5%;
+    background-color: rgb(255, 99, 71);
+    transition: ease-out 0.2s;
+    cursor: pointer;
+}
+
+.fav-location:hover {
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.location-name {
+    font-size: x-large;
+    font-weight: 700;
+}
+
+.fa-times {
+    transition: ease 0.2s;
+    cursor: pointer;
+    font-size: x-large;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.fa-times:hover {
+    color: red;
+}
+
+.lat-lng {
+    display: flex;
+    flex-direction: column;
+}
+
+.lat-lng span {
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+.coord-block {
+    display: flex;
+    align-items: baseline;
+}
