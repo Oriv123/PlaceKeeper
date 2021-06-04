@@ -18,11 +18,9 @@ function _savePreferencesToStorage() {
 }
 
 function zodiacSignHelper(newDate) {
-
     var birthDate = newDate.split('-');
     birthDate = birthDate.splice(1);
     birthDate = { month: parseInt(birthDate[0]), day: parseInt(birthDate[1]) };
-    console.log(birthDate);
 
     return determineZodiacByDate(birthDate);
 }
@@ -121,7 +119,6 @@ function determineZodiacByDate(date) {
             }
             break;
 
-
         case 11: // november
             if (date.day >= 22) {
                 return 'sagittarius';
@@ -129,7 +126,6 @@ function determineZodiacByDate(date) {
                 return 'scorpio';
             }
             break;
-
 
         case 12: // december
             if (date.day >= 22) {

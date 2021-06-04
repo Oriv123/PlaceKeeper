@@ -37,9 +37,9 @@ function initMap(lat = null, lng = null) {
     map = new google.maps.Map(elMap, options);
 
 
-    map.addListener('click', function(e) {
+    map.addListener('click', function(event) {
 
-        onNewLocation(e);
+        onNewLocation(event);
     });
 }
 
@@ -66,7 +66,7 @@ function onNewLocation(event) {
     gCurrLocation = { lat, lng };
 }
 
-function addNewLocation() {
+function addNewLocation(event) {
 
     event.preventDefault();
 
@@ -102,7 +102,9 @@ function getPosition() {
 }
 
 function showLocation(position) {
-    console.log(position);
+    map.setCenter({ lat: position.coords.latitude, lng: position.coords.longitude }, 10)
+}
 
-    initMap(position.coords.latitude, position.coords.longitude);
+function moveMap(lat, lng) {
+    map.setCenter({ lat, lng }, 10)
 }

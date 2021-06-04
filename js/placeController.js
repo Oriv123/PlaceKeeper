@@ -1,8 +1,7 @@
 'use strict';
 
-
 function deleteLocation(locationId) {
-    event.stopPropagation();
+    // event.stopPropagation();
     if (onDelete) return;
 
     var locationIdx = gLocations.findIndex(function(location) {
@@ -23,13 +22,12 @@ function deleteLocation(locationId) {
 function renderFavoritePlaces() {
 
     var favoriteLocations = loadFromStorage(KEY);
-    console.log(favoriteLocations);
 
     var strHtml = favoriteLocations.map(location => {
 
         return `
         
-        <div class="fav-location data-${location.id}" onclick="initMap(${location.lat}, ${location.lng})">
+        <div class="fav-location data-${location.id}" onclick="moveMap(${location.lat}, ${location.lng})">
             <p class="location-name">${location.name}</p>
             <div class="lat-lng">
             <div class="coord-block"><span>Lat:</span><p>${location.lat}</p></div>
@@ -42,7 +40,6 @@ function renderFavoritePlaces() {
 
     document.querySelector('.fav-locations').innerHTML = strHtml.join('');
 }
-
 
 function handleLocationError(error) {
     var locationError = document.getElementById("error-input");

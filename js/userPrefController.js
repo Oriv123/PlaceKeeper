@@ -32,28 +32,21 @@ async function onDatePrefChange(event, hasZodiac = null) {
     _savePreferencesToStorage();
 }
 
-function setHomepageIndex() {
-
-    var elForecast = document.querySelector('.dailyForecast');
-}
-
 function prefChangeNotice(success = true) {
 
     var elNotice = document.querySelector('.settings-message');
+
     if (success) {
         elNotice.textContent = 'Settings Saved Successfully!';
     } else {
-
         elNotice.textContent = 'Settings Unchanges - Pick A Date!';
     }
     elNotice.style.opacity = '1';
 
     setTimeout(() => {
-
         elNotice.style.opacity = '0';
     }, 2000);
 }
-
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);

@@ -12,27 +12,35 @@
 </head>
 
 <body onload="onInit('user-pref')">
+
     <nav>
         <a class="nav-item nav-home" href="index.html">Home</a>
         <a class="nav-item nav-map" href="map.html">Map</a>
         <a class="nav-item nav-preferences nav-selected" href="user-prefs.html">Customize</a>
     </nav>
+
     <h1 class="settings-title">Make It Your Own</h1>
     <h2 class="settings-message">Success!</h2>
+
     <main class="main-prefs">
 
         <div class="preference-box">
-
             <p>Set Your Color Palette</p>
             <form id="frm-pref-page" class="main-prefs-item">
-                <div class="pref-bgc"><span>Background Color:</span><input type="color" id="color" name="bgc" form="frmPref" value="#40E0D0"></div>
-                <div class="pref-tc"><span>Text Color:</span><input type="color" id="color" name="tc" form="frmPref" value="#FFA500"></div>
+                <div class="pref-bgc"><span>Background Color:</span>
+                    <input type="color" id="color" name="bgc" form="frmPref" value="#40E0D0">
+                </div>
+
+
+                <div class="pref-tc"><span>Text Color:</span>
+                    <input type="color" id="color" name="tc" form="frmPref" value="#FFA500">
+                </div>
+
                 <button onclick="onColorPrefChange(event)">Save</button>
             </form>
         </div>
 
         <div class="preference-box">
-
             <p>Set Your Homepage Horoscope</p>
             <form id="frm-pref-date" class="main-prefs-item">
                 <div class="pref-date"><span>Date of Birth:</span><input type="date" id="dob" name="dob"></div>
@@ -40,9 +48,6 @@
             </form>
 
         </div>
-
-
-
     </main>
 
 
